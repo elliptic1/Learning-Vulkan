@@ -1,14 +1,40 @@
-//
-//  main.cpp
-//  Vulkan-Draw-Something
-//
-//  Created by Todd Smith on 5/15/22.
-//
+#include <vulkan/vulkan.h>
 
 #include <iostream>
+#include <stdexcept>
+#include <cstdlib>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+class HelloTriangleApplication {
+public:
+    void run() {
+        initVulkan();
+        mainLoop();
+        cleanup();
+    }
+
+private:
+    void initVulkan() {
+
+    }
+
+    void mainLoop() {
+
+    }
+
+    void cleanup() {
+
+    }
+};
+
+int main() {
+    HelloTriangleApplication app;
+
+    try {
+        app.run();
+    } catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    return EXIT_SUCCESS;
 }
